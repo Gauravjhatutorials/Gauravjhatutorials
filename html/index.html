@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <h1>GAURAV KUMAR</h1>
-    <div class="login">
-        <form>
-            <h1>LOG IN</h1>
-            <label>Username</label>
-            <input type="text">
-            <label>Password</label>
-            <input type="password">
-            <button>Submit</button>
-        </form>
+    <h1>Gaurav Kumar</h1>
+    <div class="box">
+        <button id="start">Start Screen Share</button>
+        <div class="vid">
+            <video id="video" autoplay></video>
+        </div>
+
     </div>
+        <script>
+            start.onclick = async()=>{
+                const Screen = await navigator.mediaDevices.getDisplayMedia({video:true});
+                video.srcObject=Screen
+            }
+        </script>
 </body>
 </html>
